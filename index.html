@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบรายงาน รปภ.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>ระบบรายงาน รปภ.</h2>
+        <button id="startButton">เริ่มสแกน QR Code</button>
+
+        <div id="reader" style="display: none; width: 300px; margin: auto;"></div>
+
+        <form id="reportForm" style="display:none;">
+            <div class="form-group">
+                <label for="location">สถานที่:</label>
+                <input type="text" id="location" name="location" readonly>
+            </div>
+            
+            <div class="form-group">
+                <label for="guardName">ชื่อ รปภ.:</label>
+                <input type="text" id="guardName" name="guardName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="timestamp">วันและเวลา:</label>
+                <input type="text" id="timestamp" name="timestamp" readonly>
+            </div>
+
+            <div class="form-group">
+                <label for="status">สถานะเหตุการณ์:</label>
+                <select id="status" name="status" required>
+                    <option value="ปกติ">ปกติ</option>
+                    <option value="ไม่ปกติ">ไม่ปกติ</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="notes">ข้อความเพิ่มเติม:</label>
+                <textarea id="notes" name="notes"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="imageUpload">แนบรูปภาพ:</label>
+                <input type="file" id="imageUpload" name="image" accept="image/*" style="display: none;">
+                <button type="button" id="uploadImageButton">อัปโหลดไฟล์ภาพ</button>
+            </div>
+            
+            <div id="imagePreview" class="image-preview"></div>
+            <input type="hidden" id="imageData" name="imageData">
+
+            <button type="submit" class="submit-button">ส่งรายงาน</button>
+        </form>
+    </div>
+
+    <script src="https://unpkg.com/html5-qrcode"></script>
+    <script src="script.js"></script>
+</body>
+</html>
