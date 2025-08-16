@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>จุดตรวจ รปภ.</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <div class="container">
+        <div class="logo-container">
+            <img src="logo.jpg" alt="โลโก้บริษัท" class="company-logo">
+        </div>
+
         <h2>จุดตรวจ รปภ.</h2>
         <button id="startButton">เริ่มสแกน QR Code</button>
 
@@ -19,7 +25,7 @@
                 <label for="location">จุดตรวจ:</label>
                 <input type="text" id="location" name="location" readonly>
             </div>
-            
+
             <div class="form-group">
                 <label for="guardName">ชื่อ-นามสกุล:</label>
                 <input type="text" id="guardName" name="guardName" required>
@@ -48,7 +54,7 @@
                 <input type="file" id="imageUpload" name="image" accept="image/*" style="display: none;">
                 <button type="button" id="uploadImageButton">อัปโหลดไฟล์ภาพ</button>
             </div>
-            
+
             <div id="imagePreview" class="image-preview"></div>
             <input type="hidden" id="imageData" name="imageData">
 
@@ -59,4 +65,5 @@
     <script src="https://unpkg.com/html5-qrcode"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
