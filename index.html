@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ระบบรายงาน รปภ.</title>
+    <title>C LPN2 จุดตรวจ รปภ.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container">
-        <h2>ระบบรายงาน รปภ.</h2>
+        <h2>C LPN2 จุดตรวจ รปภ.</h2>
         <button id="startButton">เริ่มสแกน QR Code</button>
 
         <div id="reader" style="display: none; width: 300px; margin: auto;"></div>
 
         <form id="reportForm" style="display:none;">
             <div class="form-group">
-                <label for="location">สถานที่:</label>
+                <label for="location">จุดตรวจ:</label>
                 <input type="text" id="location" name="location" readonly>
             </div>
             
             <div class="form-group">
-                <label for="guardName">ชื่อ รปภ.:</label>
+                <label for="guardName">ชื่อ-นามสกุล:</label>
                 <input type="text" id="guardName" name="guardName" required>
             </div>
 
@@ -31,10 +31,10 @@
             </div>
 
             <div class="form-group">
-                <label for="status">สถานะเหตุการณ์:</label>
+                <label for="status">สถานการณ์:</label>
                 <select id="status" name="status" required>
                     <option value="ปกติ">ปกติ</option>
-                    <option value="ไม่ปกติ">ไม่ปกติ</option>
+                    <option value="ไม่ปกติ">มีเหตุผิดปกติ</option>
                 </select>
             </div>
 
