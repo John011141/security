@@ -51,8 +51,8 @@ label {
     margin-bottom: 5px;
 }
 
-input[type="text"], 
-select, 
+input[type="text"],
+select,
 textarea,
 #uploadImageButton {
     width: 100%;
@@ -88,7 +88,7 @@ textarea,
 
 .image-preview img {
     max-width: 100%;
-    max-height: 100px;
+    max-height: 150px;
     border-radius: 5px;
 }
 
@@ -107,4 +107,15 @@ textarea,
 
 .submit-button:hover {
     background-color: #218838;
+}
+
+.logo-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.company-logo {
+    max-width: 150px;
+    /* ปรับขนาดตามต้องการ */
+    height: auto;
 }
